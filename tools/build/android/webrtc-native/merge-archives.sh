@@ -77,7 +77,7 @@ function merge-archives() {
     # Find libwebrtc.aar
     source "$CURRENT_DIR/../../libwebrtc/.config.sh" # import WORK_DIR
     source "$CURRENT_DIR/../../libwebrtc/.build.sh"  # import BUILD_CONFIG
-    LIBWEBRTC_AAR="$WORK_DIR/webrtc/src/out/android/arm64/$BUILD_CONFIG/libwebrtc.aar"
+    LIBWEBRTC_AAR="$WORK_DIR/webrtc/src/out/android/arm/$BUILD_CONFIG/libwebrtc.aar"
     if [ ! -f "$LIBWEBRTC_AAR" ]; then
         echo -e "\e[31mERROR: cannot find libwebrtc.aar; $LIBWEBRTC_AAR is not a file\e[39m" >&2
         exit 1

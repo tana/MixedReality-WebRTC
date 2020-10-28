@@ -10,10 +10,10 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
         ndk {
-            abiFilters "arm64-v8a"
+            abiFilters "armeabi-v7a"
         }
         packagingOptions {
-            doNotStrip "*/arm64-v8a/*.so"
+            doNotStrip "*/armeabi-v7a/*.so"
         }
         externalNativeBuild {
             cmake {
@@ -97,7 +97,7 @@ task copyToUnitySample {
     copy {
         from './build/outputs/aar/merged'
         include "*.aar"
-        into '../../../../libs/unity/library/Runtime/Plugins/arm64-v8a'
+        into '../../../../libs/unity/library/Runtime/Plugins/armeabi-v7a'
     }
 }
 
